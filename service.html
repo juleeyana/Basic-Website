@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barangay San Francisco | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Additional styles for emphasis, symmetry, and proximity */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(38, 150, 144, 0.697);
+      border-bottom: 2px solid #ddd;
+    }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+    nav li {
+      margin: 0 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+    }
+    nav a.active {
+      color: #007bff;
+      font-weight: 900;
+      border-bottom: 2px solid #007bff;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .section {
+      width: 45%;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    .section img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .footer {
+      width: 100%;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" width="100" height="100" alt="Logo">
+      </div>
+      <nav>
+        <ul>
+          <p style="margin-right: 200px; font-weight: bold; font-size: 18px;">Barangay San Francisco, Agusan del Sur</p>
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="service.html"><i class="fas fa-cogs"></i> Service</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <div class="main-content">
+      <div class="section" style="text-align: left;">
+        <h2 style="color: #007bff;">Our Mission</h2>
+        <p style="color: white;">Barangay San Francisco aims to provide services and maintain unity within the community by promoting respect, harmony, and growth.</p>
+      </div>
+
+      <div class="section" style="text-align: left;">
+        <h2 style="color: #007bff;">Our Vision</h2>
+        <p style="color: white;">We envision a prosperous and peaceful barangay where residents enjoy a high quality of life and actively participate in community-building activities.</p>
+        
+      </div>
+    </div>
+
+    <div class="main-content" style="flex-direction: column;">
+      <h2 style="color: #007bff; font-size: 24px;">Key Services</h2>
+      <p style="width: 80%; height: 80%; margin: 0 auto; color: white;">Our barangay provides various services that ensure the well-being of our residents. We emphasize health, safety, and community development.</p>
+      <center><img src="ow.jpg" alt="Services Overview" style="max-width: 900px; margin: 20px 0; height: 600px;"></center>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Barangay San Francisco, Agusan del Sur. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function setActiveLink() {
+      const currentPage = window.location.pathname.split('/').pop(); 
+      const navLinks = document.querySelectorAll('nav a'); 
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href'); 
+        if (href === currentPage) {
+          link.classList.add('active'); 
+        } else {
+          link.classList.remove('active'); 
+        }
+      });
+    }
+
+    window.onload = setActiveLink;
+  </script>
+</body>
+</html>
